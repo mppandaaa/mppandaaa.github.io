@@ -1,0 +1,291 @@
+/* Color Palletes:
+yellow: #FFCC1D
+dark orange: #B64926
+dark green: #0B4619
+green: #116530
+grey: #E8E8CC */
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #235930;
+    font-family: 'Poppins', sans-serif;
+    color: rgba(255, 255, 255, 0.932);
+}
+
+
+.container{
+    margin: 1% auto;
+    border-radius: 0.8rem;
+    width: 94%;
+    height: 95vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.932);
+    
+}
+
+/* ------------------- HERO TEXT BOX ------------------- */
+
+.hero{
+    display: flex;
+    border-radius: 0.8rem 0 0 0.8rem;
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),  url(img/2_hands.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),  url(img/2_hands.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    align-items: center;
+    flex-basis: 65%;
+}
+
+.hero-text-box{
+    margin-left: 5%;
+}
+
+.heading-primary{
+
+    font-size: 4.2rem;
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.5px;
+    margin-bottom: 1rem; 
+    
+}
+
+
+.hero-description{
+    font-size: 1.2rem;
+    line-height: 1.5;
+
+}
+
+
+
+/* ------------------- LOGIN ------------------- */
+
+
+.login-container{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+.login-container form .error-msg{
+    margin: 1rem 0;
+    font-size: 2rem;
+}
+
+form{
+    width: 30rem;
+}
+
+
+/* ------------------- COMPANY NAME ------------------- */
+
+.company{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    height: 8rem;
+}
+
+.company-name{
+    font-size: 1.4rem;
+    text-align: justify;
+    width: 100%;
+    display: flex;   
+    justify-content: center;
+    text-transform: uppercase;
+    color: #0B4619;
+}
+
+
+
+
+/* ------------------- FORM ------------------- */
+
+
+form h2{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    color: #0B4619;
+
+}
+
+.input-div{
+    position: relative;
+    display: grid;
+    grid-template-columns: 7% 93%;
+    margin: 25px 0;
+    padding: 5px 0;
+    border-bottom: 2px solid #d9d9d9;
+}
+
+.input-div:after, .input-div:before{
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, #FFCC1D, #FFB03B, #FFCC1D);
+    transition: 0.3s;
+}
+
+.input-div:after{
+    right: 50%;
+}
+
+.input-div:before{
+    left: 50%;
+}
+
+.input-div.focus .i i{
+    color: #FFCC1D;
+}
+
+.input-div.focus div h5{
+    top:-5px;
+    font-size: 15px;
+}
+
+.input-div.focus:after, .input-div.focus:before{
+    width: 50%;
+
+}
+
+.input-div.one{
+    margin-top: 0;
+
+}
+
+.input-div.two{
+    margin-top: 4px;
+}
+
+.i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.i i{
+    color: #d9d9d9;
+    transition: 0.3s;
+}
+
+.input-div > div{
+    position: relative;
+    height: 45px;
+}
+
+.input-div > div h5{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.input{
+    
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0.5rem 0.7rem;
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    color: #555;
+}
+
+a{
+    
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #999;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    margin-bottom: 0.5rem;
+}
+
+a:hover{
+    color: #ffc062;
+}
+
+.btn{
+    width: 70%;
+    height: 4rem;
+    border-radius: 10px;
+    margin: 2rem auto;
+    font-size: 1.2rem;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    background-image: linear-gradient(to right, #FFCC1D, #B64926, #FFCC1D);
+    cursor: pointer;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    background-size: 200%;
+    transition: 0.5s;
+}
+
+.btn:hover{
+    background-position: right;
+}
+
+
+
+/* 
+@media screen and (max-width: 1000px){
+    form{
+        width: 29rem;
+    }
+    form h2{
+        font-size: 2.4rem;
+        margin: 8px 0;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .hero-text-box{
+        display: none;
+    }
+
+    .container{
+        grid-template-columns: 1fr;
+    }
+
+    .login-container{
+        justify-content: center;
+    }
+}  */

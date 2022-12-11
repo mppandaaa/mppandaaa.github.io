@@ -1,0 +1,273 @@
+/* Color Palletes:
+green: #468966
+yellow: #FFF0A5
+gold: #FFB03B
+dark orange: #B64926 */
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #468966;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.container{
+    border-radius: 0.8rem;
+    max-width: 130rem;
+    height: 60rem;
+    display:grid;
+    grid-template-columns: 1fr 0.6fr;
+    align-items: center;
+    margin: 5% 1%;
+    background-color: #edf3f0;
+}
+
+.hero-text-box{
+    
+    border-radius: 0.8rem 0 0 0.8rem;
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),  url(2_hands.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),  url(2_hands.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading-primary{
+   
+    max-width: 35rem;
+    margin: 25% 0 3.2rem 10%;
+    font-size: 4.2rem;
+    font-weight: 700;
+    line-height: 1.05;
+    color: #dae7e0;
+    letter-spacing: -0.5px;
+
+    
+}
+
+
+
+.hero-description{
+    
+    max-width: 35rem;
+    margin-left: 10%;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #edf3f0;
+}
+
+
+
+
+
+
+
+
+.login-container{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.login-container form .error-msg{
+    margin: 1rem 0;
+    font-size: 2rem;
+}
+
+form{
+    width: 30rem;
+}
+
+.logo img{
+    float: left;
+    width: 7.3rem;
+}
+
+
+.company-name h3{
+    color: #cc8d2f;
+    font-size: 1.6rem;
+    text-align: justify;   
+    text-transform: uppercase;
+    margin: .5rem 0 2rem 1rem;
+    background: -webkit-linear-gradient(#B64926,#FFB03B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+
+form h2{
+    font-size: 2.9rem;
+    text-transform: uppercase;
+    margin: 15px 0 50px 0;
+    background: -webkit-linear-gradient(#FFB03B,#B64926);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.input-div{
+    position: relative;
+    display: grid;
+    grid-template-columns: 7% 93%;
+    margin: 25px 0;
+    padding: 5px 0;
+    border-bottom: 2px solid #d9d9d9;
+}
+
+.input-div:after, .input-div:before{
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, #FFF0A5, #FFB03B, #FFF0A5);
+    transition: 0.3s;
+}
+
+.input-div:after{
+    right: 50%;
+}
+
+.input-div:before{
+    left: 50%;
+}
+
+.input-div.focus .i i{
+    color: #FFB03B;
+}
+
+.input-div.focus div h5{
+    top:-5px;
+    font-size: 15px;
+}
+
+.input-div.focus:after, .input-div.focus:before{
+    width: 50%;
+
+}
+
+.input-div.one{
+    margin-top: 0;
+
+}
+
+.input-div.two{
+    margin-top: 0.4rem;
+}
+
+.i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.i i{
+    color: #d9d9d9;
+    transition: 0.3s;
+}
+
+.input-div > div{
+    position: relative;
+    height: 45px;
+}
+
+.input-div > div h5{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.input{
+    
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0.5rem 0.7rem;
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    color: #555;
+}
+
+a{
+
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #999;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    margin-bottom: 0.5rem;
+}
+
+a:hover{
+    color: #ffc062;
+}
+
+.btn{
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    margin: 2rem 0;
+    font-size: 1.2rem;
+    outline: none;
+    border: none;
+    background-image: linear-gradient(to right, #FFB03B, #B64926, #FFB03B);
+    cursor: pointer;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    background-size: 200%;
+    transition: 0.5s;
+}
+
+.btn:hover{
+    background-position: right;
+}
+
+
+@media screen and (max-width: 1000px){
+    form{
+        width: 29rem;
+    }
+    form h2{
+        font-size: 2.4rem;
+        margin: 8px 0;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .hero-text-box{
+        display: none;
+    }
+
+    .container{
+        grid-template-columns: 1fr;
+    }
+
+    .login-container{
+        justify-content: center;
+    }
+}
