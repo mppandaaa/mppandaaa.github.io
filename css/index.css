@@ -25,7 +25,7 @@ body {
 /* COMMON STYLES */
 /* ----------------------------------------------- */
 
-header,
+header, .row,
 nav,
 .bar,
 .section-products,
@@ -79,9 +79,6 @@ header {
 }
 
 .row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 80%;
 }
 
@@ -377,8 +374,8 @@ footer {
   .products p {
     margin: 0.5rem 0.25rem -1rem 0.25rem;
   }
-  
-  .products h2{
+
+  .products h2 {
     font-size: 1.4rem;
   }
 }
