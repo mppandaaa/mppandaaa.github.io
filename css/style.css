@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Satoshi', sans-serif;
+}
+
+body{
+    background-color: #FEFFDB;
+}
+
+
+nav img{
+    width: 100px;
+    border-radius: 50%;
+}
+
+nav{
+    
+    background-color:#444444 ;
+}
+
+
+
+
+
+.hero-bg{
+    
+    background-image: url(../img/hero-background.jpg);
+    background-size: cover;
+}
+
+@media screen and (max-width: 992px) {
+    .hero-bg{
+        background-color: #FFC60B;
+        background-image: none;
+    }
+}
