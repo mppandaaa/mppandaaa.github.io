@@ -4,10 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      href="img/313166763_501687498640268_852562016297140260_n.jpg"
-    />
+    <link rel="icon" href="img/logo.png" />
     <link rel="stylesheet" href="css/style.css" />
     <script
       src="https://kit.fontawesome.com/6f8fdf9f13.js"
@@ -27,22 +24,28 @@
   </head>
   <body>
     <section id="home">
-      <nav class="navbar navbar-expand-lg">
+      <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-          <a class="navbar-brand" href="#"
-            ><img
-              src="img/313166763_501687498640268_852562016297140260_n.jpg"
-              alt=""
+          <a class="navbar-brand order-2 order-lg-1" href="index.html"
+            ><img src="img/logo.png" alt=""
           /></a>
-          <button
-            type="button"
-            class="navbar-toggler"
-            data-bs-toggle="collapse"
-            data-bs-target="#menu"
+          <a
+            href="#"
+            class="ms-3 ms-sm-0 d-block d-lg-none order-1"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#navigation-bar"
           >
-          <i class="fa-solid fa-bars"></i>
-          </button>
-          <div id="menu" class="collapse navbar-collapse justify-content-end">
+            <i class="fa-solid fa-bars text-white"></i>
+          </a>
+          <a
+            href="#"
+            class="d-block d-lg-none order-3"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#cart"
+          >
+            <i class="me-3 me-sm-0 fa-solid fa-cart-shopping text-white"></i
+          ></a>
+          <div id="menu" class="collapse order-lg-2 navbar-collapse">
             <ul class="navbar-nav align-items-center">
               <li class="nav-item">
                 <a href="index.html" class="nav-link text-light">Home</a>
@@ -61,7 +64,7 @@
                   role="button"
                   >Accessories</a
                 >
-                <ul class="dropdown-menu text-center">
+                <ul class="dropdown-menu">
                   <li><a class="dropdown-item fw-bold" href="#">Case</a></li>
                   <li><a class="dropdown-item fw-bold" href="#">Cable</a></li>
                   <li><a class="dropdown-item fw-bold" href="#">Charger</a></li>
@@ -78,23 +81,92 @@
               </li>
 
               <li class="nav-item">
-                
-                <a role="button" class="nav-link text-light" data-bs-toggle="offcanvas" data-bs-target="#asd"
+                <a
+                  role="button"
+                  class="nav-link text-light"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#asd"
                   ><i class="fa-solid fa-cart-shopping"></i
                 ></a>
-          
-                
-              </div>
               </li>
             </ul>
-            
           </div>
         </div>
       </nav>
 
+      <!-- offcanvas template -->
+
       <div class="offcanvas offcanvas-end" id="asd">
         <div class="offcanvas-header">Header</div>
         <div class="offcanvas-body">Body</div>
+      </div>
+
+      <!-- offcanvas navbar -->
+      <div class="offcanvas offcanvas-start" id="navigation-bar">
+        <div class="offcanvas-header">
+          <img src="img/logo.png" alt="" class="rounded-circle" />
+          <h5 class="m-0">Menu</h5>
+          <button
+            type="button"
+            data-bs-dismiss="offcanvas"
+            class="btn-close btn-close-white"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="help">
+            <a
+              href="#"
+              data-bs-dismiss="offcanvas"
+              class="p-3 btn d-flex justify-content-between"
+            >
+              Home </a
+            ><a
+              href="iphone.html"
+              class="p-3 btn d-flex justify-content-between"
+            >
+              iPhone </a
+            ><a href="#" class="p-3 btn d-flex justify-content-between">
+              Android
+            </a>
+            <a
+              data-bs-toggle="collapse"
+              data-bs-target="#accessories"
+              class="p-3 btn d-flex justify-content-between align-items-center"
+            >
+              Accessories
+
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+          </div>
+
+          <div id="accessories" class="collapse">
+            <ul class="list-group">
+              <li class="p-3 list-group-item"><a href="#">Case</a></li>
+              <li class="p-3 list-group-item"><a href="#">Cable</a></li>
+              <li class="p-3 list-group-item"><a href="#">Charger</a></li>
+              <li class="p-3 list-group-item">
+                <a href="#">Tempered Glass</a>
+              </li>
+              <li class="p-3 list-group-item"><a href="#">Sim Cards</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- offcanvas cart -->
+      <div class="offcanvas offcanvas-end" id="cart">
+        <div class="offcanvas-header">
+          <img src="img/logo.png" alt="" class="rounded-circle" />
+          <h5 class="m-0">Cart</h5>
+          <button
+            type="button"
+            data-bs-dismiss="offcanvas"
+            class="btn-close btn-close-white"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <h3 class="text-center">No products in cart.</h3>
+        </div>
       </div>
 
       <div class="hero d-md-flex d-sm-block">
@@ -103,7 +175,7 @@
         >
           <h1 class="fw-bold">Best gadgets you'll ever need.</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          
+
           <div>
             <a
               class="btn btn-outline-dark px-5 py-3 rounded text-nowrap"
@@ -163,10 +235,13 @@
             </h2>
 
             <div class="hover-btn d-flex justify-content-center">
-              <a href="iphone.html" class="btn btn-outline-secondary px-4">Buy now</a>
+              <a href="iphone.html" class="btn btn-outline-secondary px-4"
+                >Buy now</a
+              >
             </div>
           </div>
         </div>
+
         <div
           class="category-item col d-flex flex-column align-items-center p-5 mx-2 my-2 rounded"
         >
@@ -196,61 +271,90 @@
       </div>
     </section>
 
-<section class="py-5 feature container-fluid d-block d-md-flex">
-  <div class="mx-2 my-3 my-md-0 p-4 col shadow d-flex flex-column align-items-center text-center">
-    <h1><span class="fw-bold">iPhone</span> 12 Pro Max </h1> <h2>128GB Graphite</h2>
-    <h4>Inclusions: Box, Chord, Manual & Sim Ejector</h4>
-    <h5>Freebies: Case & Tempered Glass</h5>
-    <a href="#" class="mb-2 "><h5 >Add to cart</h5></a>
-<img src="img/iphone-12-pro-graphite.png" class="w-50" alt="">
-    </div>
-    <div class="mx-2 my-3 my-md-0 p-4 col shadow d-flex flex-column align-items-center text-center ">
-      <h1><span class="fw-bold">iPhone</span> 13 </h1><h2>128GB Midnight</h2>
-      <h4>Inclusions: Box, Chord, Manual & Sim Ejector</h4>
-      <h5>Freebies: Case & Tempered Glass</h5>
-        <a href="#" class="mb-2 "><h5 >Add to cart</h5></a>
-  <img src="img/iphone-13-midnight.png" class="w-50" alt="">
+    <section class="py-5 feature container-fluid d-block d-md-flex flex-wrap">
+      <div
+        class="mx-lg-2 my-3 p-4 col-12 col-lg shadow d-flex flex-lg-column align-items-center text-center rounded"
+      >
+      <div class="feature-details order-2 order-lg-1 col-5 col-sm-7 col-lg-12">
+        <h2><span class="fw-bold">iPhone</span> 12 Pro Max</h2>
+        <h4>128GB Graphite</h4>
+        <h6 class="d-none d-md-block">Inclusions: Box, Chord, Manual & Sim Ejector</h6>
+        <h6 class="d-none d-md-block">Freebies: Case & Tempered Glass</h6>
+        <a href="#" class="mb-2"><p>Add to cart</p></a>
+      </div>
+      <div class="feature-img order-1 order-lg-2 col-7 col-sm-5 col-lg-12">
+      
+        <img src="img/iphone-12-pro-graphite.png" class="" alt="" />
+      </div>
       </div>
 
-</section>
+      <div
+      class="mx-lg-2 my-3 p-4 col-12 col-lg shadow d-flex flex-lg-column align-items-center text-center rounded"
+    >
+    <div class="feature-details order-2 order-lg-1 col-5 col-sm-7 col-lg-12">
+      <h2><span class="fw-bold">iPhone</span> 13</h2>
+      <h4>128GB Midnight</h4>
+      <h6 class="d-none d-md-block">Inclusions: Box, Chord, Manual & Sim Ejector</h6>
+      <h6 class="d-none d-md-block">Freebies: Case & Tempered Glass</h6>
+      <a href="#" class="mb-2"><p>Add to cart</p></a>
+    </div>
+    <div class="feature-img order-1 order-lg-2 col-7 col-sm-5 col-lg-12">
+    
+      <img src="img/iphone-13-midnight.png" class="" alt="" />
+    </div>
+    </div>
+
+   
+    </section>
 
     <footer class="p-4">
-
-
       <div class="container d-flex text-white justify-content-center">
         <div class="text-white mx-md-5 mx-2">
-          <h5>Follow OBN Gadgets</h5>
+          <h5>Follow Us</h5>
           <ul class="d-flex">
-            <li><a href="https://www.facebook.com/obn.gadgets" target="_blank">Facebook</a></li>
-            <li class="ms-2"><a href="https://www.facebook.com/obn.gadgets" target="_blank"><i class="fa-brands fa-square-facebook"></i></a></li>
-            
+            <li>
+              <a href="https://www.facebook.com/obn.gadgets" target="_blank"
+                >Facebook</a
+              >
+            </li>
+            <li class="ms-2">
+              <a href="https://www.facebook.com/obn.gadgets" target="_blank"
+                ><i class="fa-brands fa-square-facebook"></i
+              ></a>
+            </li>
           </ul>
         </div>
 
-        <div class=" mx-md-5 mx-2">
+        <div class="mx-md-5 mx-2">
           <h5>Products</h5>
           <ul>
-            <li><a href="iphone.html">iPhone</a> </li>
-            <li><a href="#">Android</a> </li>
-            <li><a href="#">Accessories</a> </li>
-          
+            <li><a href="iphone.html">iPhone</a></li>
+            <li><a href="#">Android</a></li>
+            <li><a href="#">Accessories</a></li>
           </ul>
-        </div> 
-        <div class=" mx-md-5 mx-2">
+        </div>
+        <div class="mx-md-5 mx-2">
           <h5>Contact Us</h5>
           <ul>
-            <li>+63 922 4444 333 </li>
-            <li><a href="https://www.facebook.com/obn.gadgets" target="_blank">Facebook</a> </li>
-            <li><a href="https://www.google.com/maps/place/OBN+Gadgets/@16.7795767,121.6981194,21z/data=!4m12!1m6!3m5!1s0x3397c81910a0ad7f:0xe5db9ca75b4d67b5!2sHot+Gadgets!8m2!3d14.6378013!4d121.0345225!3m4!1s0x339aab172512390f:0x359326f7e9e2f93b!8m2!3d16.7796524!4d121.6981205" target="_blank">Store Location</a> </li>
-            
+            <li>+63 922 4444 333</li>
+            <li>
+              <a href="https://www.facebook.com/obn.gadgets" target="_blank"
+                >Facebook</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.google.com/maps/place/OBN+Gadgets/@16.7795767,121.6981194,21z/data=!4m12!1m6!3m5!1s0x3397c81910a0ad7f:0xe5db9ca75b4d67b5!2sHot+Gadgets!8m2!3d14.6378013!4d121.0345225!3m4!1s0x339aab172512390f:0x359326f7e9e2f93b!8m2!3d16.7796524!4d121.6981205"
+                target="_blank"
+                >Store Location</a
+              >
+            </li>
           </ul>
-
         </div>
-
       </div>
- 
-<hr>
-      <p class="text-white text-center">Copyright @ 2023</p>
+
+      <hr />
+      <p class="text-white text-center">Copyright &copy; 2023</p>
     </footer>
 
     <script
